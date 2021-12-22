@@ -1,0 +1,132 @@
+:root {
+  --main-bg-color: rgb(221, 221, 221);
+  --second-bg-color: #9b0909;
+  --third-bg-color: #efedee;
+
+  --main-font-color: #9b0909;
+  --second-font-color: rgb(221, 221, 221);
+  --third-font-color: #666666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 16px * 62.5 = 10px = iren */
+}
+
+body {
+  margin: 0;
+  font: 1.6rem "Mukta", sans-serif;
+  height: 100vh;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #a2a3e9;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 8rem 1fr 8rem;
+  min-height: 100%;
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+}
+
+header {
+  grid-area: header;
+  color: var(--main-font-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+header a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.brand a {
+  font-style: 3rem;
+}
+
+footer {
+  background-color: var(--main-font-color);
+  display: flex;
+  justify-content: center;
+  color: var(--third-bg-color);
+  padding: 1.7rem;
+  align-items: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.products li {
+  margin: 3rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+  background-color: var(--third-bg-color);
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.product img {
+  max-height: 26rem;
+}
+
+.product-name {
+  line-height: 2.2rem;
+}
+
+.product-brand {
+  font-size: 1.2rem;
+  color: var(--third-font-color);
+}
+
+.product-price {
+  font-size: 2rem;
+}
+
+.rating {
+  color: rgb(252, 172, 24);
+  font-size: 1.4rem;
+}
+
+.rating span:last-child {
+  color: var(--third-font-color);
+  font-size: 1.2rem;
+}
+
+.content {
+  padding: 1rem;
+}
